@@ -22,6 +22,7 @@ body {
   background-color: var(--body-bg);
   background-image: url('/img/black-noise.png');
   font-family: 'Avara', sans-serif;
+  color: var(--title-color);
 }
 
 h1.title {
@@ -48,9 +49,13 @@ h4 {
 h1 {
   font-size: 3rem;
 }
+h2 {
+  font-size: 2rem;
+}
 
 
 .post {
+  color: var(--text-color);
   background-color: var(--post-bg);
   background-image: url(/img/paper-noise.png);
   border: solid --border-color 1px;
