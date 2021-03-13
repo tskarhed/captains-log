@@ -2,15 +2,29 @@
   --body-bg: #222;
   --text-color: #222;
   --title-color: #ddd;
-  --border-color: #b37a48
+  --border-color: #b37a48;
+  --post-bg: #e8ceb7;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400&display=swap');
+@font-face {
+    font-family: "Black Sam's Gold";
+    src: url(/css/fonts/BlackSamsGold.ttf);
+}
+
+@font-face {
+  font-family: "Avara";
+  src: url(/css/fonts/Avara.otf);
+}
+
 
 body {
   background-color: var(--body-bg);
   background-image: url('/img/black-noise.png');
+  font-family: 'Avara', sans-serif;
 }
 
-.title {
+h1.title {
   text-align: center;
   font-family: 'Cinzel', 'Trajan', 'Trajan Pro', serif;
   font-weight: lighter;
@@ -18,7 +32,45 @@ body {
 }
 
 /*Reset link styles*/
-.title a {
+h1.title a {
   color: var(--title-color);
   text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Black Sam's Gold", "Old English Text MT", script;
+  font-weight: lighter;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+
+.post {
+  background-color: var(--post-bg);
+  background-image: url(/img/paper-noise.png);
+  border: solid --border-color 1px;
+	box-shadow: inset 0 0 50px 10px #b8875c;
+
+  border-radius: 0.3rem;
+  padding: 2rem;
+
+  position: relative;
+}
+
+/*Ribbon*/
+.post::before{
+  content: "";
+  background-image: url(/img/ribbon.svg);
+  position: absolute;
+  left: 3rem;
+  top: -4px;
+  width: 5%;
+  height: 84px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }

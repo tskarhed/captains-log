@@ -2,11 +2,12 @@
 layout: layouts/base.njk
 templateClass: tmpl-post
 ---
+<article class="post">
 <h1>{{ title }}</h1>
 
 {{ content | safe }}
 
-<hr>
+</article>
 <ul>
   {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
   {%- if nextPost %}<li>Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
