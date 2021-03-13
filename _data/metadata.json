@@ -1,9 +1,9 @@
 {
-  "title": "Your Blog Name",
+  "title": "Captain's Log",
   "url": "https://example.com/",
-  "description": "I am writing about my experiences as a naval navel-gazer.",
+  "description": "Yoho, mateys! I've been sailing the seven seas, and this is my story!",
   "feed": {
-    "subtitle": "I am writing about my experiences as a naval navel-gazer.",
+    "subtitle": "Yoho, mateys! I've been sailing the seven seas, and this is my story!",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "id": "https://example.com/"
