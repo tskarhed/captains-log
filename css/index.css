@@ -55,16 +55,24 @@ h2 {
 
 
 .post {
+  /* WIdth for position of banner */
+  position: relative;
+  box-sizing: border-box;
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.paper {
   color: var(--text-color);
   background-color: var(--post-bg);
   background-image: url(/img/paper-noise.png);
-  border: solid --border-color 1px;
+  border: solid var(--border-color) 1px;
 	box-shadow: inset 0 0 50px 10px #b8875c;
 
   border-radius: 0.3rem;
   padding: 2rem;
 
-  position: relative;
 }
 
 /*Ribbon*/
@@ -75,7 +83,26 @@ h2 {
   left: 3rem;
   top: -4px;
   width: 5%;
+  min-width: 30px;
   height: 84px;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+
+/* Content*/
+main.content {
+  padding: 1rem 10rem;
+}
+
+@media screen and (max-width: 700px){
+  main.content{
+    padding: 1rem 2rem;
+  }
+}
+
+@media screen and (max-width: 370px){
+  main.content{
+    padding: 1rem 5px;
+  }
 }
