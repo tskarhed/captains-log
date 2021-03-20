@@ -109,8 +109,14 @@ main.content {
 
 /*Post list*/
 .postlist {
+  list-style-type: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
   row-gap: 10px;
   column-gap: 10px;
+}
+
+.postlist-link{
+  text-decoration: none;
+  color: var(--text-color);
 }
