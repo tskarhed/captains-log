@@ -3,7 +3,13 @@
   --text-color: #222;
   --title-color: #ddd;
   --border-color: #b37a48;
+  --border-width: 10px;
   --post-bg: #e8ceb7;
+}
+
+*::selection{
+  background-color: #123456;
+  color: white;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400&display=swap');
@@ -65,13 +71,26 @@ h2 {
 
 .paper {
   color: var(--text-color);
-  background-color: var(--post-bg);
-  background-image: url(/img/paper-noise.png);
-  border: solid var(--border-color) 1px;
-	box-shadow: inset 0 0 50px 10px #b8875c;
 
+  border: solid transparent var(--border-width);
+  border-image: url(/img/paper-noise-border.png) 13% fill stretch;
   border-radius: 0.3rem;
   padding: 2rem;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.paper::after {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  box-sizing: border-box;
+  display: block;
+  top: -10px;
+  left: -10px;
+  width: calc(100% + 2 * var(--border-width));
+  height: calc(100% + 2 * var(--border-width));
+  background-image: url(/img/paper-noise.png);
 
 }
 
@@ -81,7 +100,7 @@ h2 {
   background-image: url(/img/ribbon.svg);
   position: absolute;
   left: 3rem;
-  top: -4px;
+  top: -10px;
   width: 5%;
   min-width: 30px;
   height: 84px;
