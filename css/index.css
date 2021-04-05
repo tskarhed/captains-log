@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
 :root{
   --body-bg: #222;
   --text-color: #222;
@@ -6,6 +8,7 @@
   --border-width: 10px;
   --post-bg: #e8ceb7;
   --title-font: 'Cinzel', 'Trajan', 'Trajan Pro', serif;
+  --script-font: 'Monsieur La Doulaise';
 }
 
 *::selection{
@@ -13,7 +16,7 @@
   color: white;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400&display=swap');
+
 @font-face {
     font-family: "Black Sam's Gold";
     src: url(/css/fonts/BlackSamsGold.ttf);
@@ -214,4 +217,28 @@ a{
 
 .postlist-link {
   display: block;
+}
+
+
+/*Post signature styles*/
+.post-signature{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  padding-top: 1rem;
+}
+
+.post-signature > img{
+  width: 17rem;
+  opacity: 0.2;
+  margin-right: 3rem;
+  max-width: 90%;
+  pointer-events: none;
+}
+
+.post-signature > span{
+  display: inline-block;
+  transform: rotate(-15deg);
+  font-family: var(--script-font);
+  font-size: 3rem;
 }

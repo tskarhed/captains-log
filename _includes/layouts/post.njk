@@ -7,6 +7,12 @@ templateClass: tmpl-post
 
 {{ content | safe }}
 
+{%- if author%}
+<div class="post-signature">
+<img alt="Image of compass rose" src="/img/compass.svg"/>
+<span>{{author}}</span>
+</div>
+{% endif %}
 </article>
 <ul>
   {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
