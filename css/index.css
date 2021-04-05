@@ -5,6 +5,7 @@
   --border-color: #b37a48;
   --border-width: 10px;
   --post-bg: #e8ceb7;
+  --title-font: 'Cinzel', 'Trajan', 'Trajan Pro', serif;
 }
 
 *::selection{
@@ -33,7 +34,7 @@ body {
 
 h1.title {
   text-align: center;
-  font-family: 'Cinzel', 'Trajan', 'Trajan Pro', serif;
+  font-family: var(--title-font);
   font-weight: lighter;
   font-size: 3rem;
 }
@@ -138,4 +139,26 @@ main.content {
 .postlist-link{
   text-decoration: none;
   color: var(--text-color);
+}
+
+
+/*Navigation*/
+.nav {
+  display: flex;
+  font-family: var(--title-font);
+  justify-content: space-evenly;
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+
+.nav-item{
+  padding: 0.5rem;
+}
+.nav-item > a{
+ color: var(--title-color);
+ text-decoration: none;
+}
+
+.nav-item-active > a{
+  text-decoration: underline;
 }
