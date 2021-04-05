@@ -14,9 +14,9 @@ templateClass: tmpl-post
 </div>
 {% endif %}
 </article>
-<ul>
+<div class="prev-next">
   {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
-  {%- if nextPost %}<li>Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+  {%- if nextPost %}<a href="{{ nextPost.url | url }}"><img alt="Left arrow" class="arrow left" src="/img/arrow.svg"/>{{ nextPost.data.title }}</a>{% endif %}
   {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
-  {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-</ul>
+  {%- if previousPost %}<a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}<img alt="Right arrow" class="arrow right" src="/img/arrow.svg"/></a>{% endif %}
+</div>

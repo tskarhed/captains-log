@@ -8,7 +8,8 @@
   --border-width: 10px;
   --post-bg: #e8ceb7;
   --title-font: 'Cinzel', 'Trajan', 'Trajan Pro', serif;
-  --script-font: 'Monsieur La Doulaise';
+  --header-font: "Black Sam's Gold", "Old English Text MT", script;
+  --script-font: 'Monsieur La Doulaise', script;
 }
 
 *::selection{
@@ -52,7 +53,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Black Sam's Gold", "Old English Text MT", script;
+  font-family: var(--header-font);
   font-weight: lighter;
 }
 
@@ -241,4 +242,37 @@ a{
   transform: rotate(-15deg);
   font-family: var(--script-font);
   font-size: 3rem;
+}
+
+/* Previous next buttons on the post*/
+.prev-next{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-family: var(--header-font);
+  font-size: 1.5rem;
+}
+
+.prev-next > a {
+  padding: 1rem;
+  color: var(--title-color);
+  text-decoration: none;
+}
+.arrow {
+  vertical-align: middle;
+  margin: 0.2rem;
+  transform: translate(0);
+  transition: transform 0.1s linear;
+}
+
+.arrow.left {
+  transform: rotate(180deg);
+}
+
+a:hover > .arrow.left {
+  transform: translate(-5px) rotate(180deg);
+}
+
+a:hover > .arrow.right {
+  transform: translate(5px);
 }
