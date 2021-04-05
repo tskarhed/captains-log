@@ -276,3 +276,12 @@ a:hover > .arrow.left {
 a:hover > .arrow.right {
   transform: translate(5px);
 }
+
+/* Header title*/
+
+#header-compass{
+  height: 55px;
+  width: 55px;
+  vertical-align: bottom;
+  margin: 10px;
+}
