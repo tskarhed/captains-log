@@ -258,15 +258,15 @@ a{
   color: var(--title-color);
   text-decoration: none;
 }
+.arrow.left {
+  transform: rotate(180deg);
+}
+
 .arrow {
   vertical-align: middle;
   margin: 0.5rem;
   transform: translate(0);
   transition: transform 0.1s linear;
-}
-
-.arrow.left {
-  transform: rotate(180deg);
 }
 
 a:hover > .arrow.left {
